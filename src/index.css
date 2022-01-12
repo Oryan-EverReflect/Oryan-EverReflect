@@ -1,0 +1,15 @@
+body {
+  /* background: url('./assets/snow.jpg');
+  background-size: cover;
+  height: 100vh;
+  background-position: center; */
+  background-color: white;
+  color: black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1 {
+}
