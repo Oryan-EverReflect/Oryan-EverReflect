@@ -33,7 +33,7 @@ const NavBarTop = () => {
       <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: '#193759' }} variant="dark">
         <Container>
           <img src={logo} style={{ width: '100px' }} />
-          <Navbar.Brand>Bankers Dream Dashboard</Navbar.Brand>
+          <Navbar.Brand>EverReflect Dashboard</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -47,7 +47,7 @@ const NavBarTop = () => {
               <Nav.Link as={Link} to="/swap">
                 Swap
               </Nav.Link>
-              <Nav.Link href="https://bankersdream.org">Bankers Dream</Nav.Link>
+              <Nav.Link href="https://www.everreflect.io">EverReflect</Nav.Link>
             </Nav>
             <Nav>
               <Button

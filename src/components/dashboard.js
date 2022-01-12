@@ -108,7 +108,7 @@ const Dashboard = () => {
                 marginRight: 'auto'
               }}
             >
-              Bankers Dream Rewards
+              EverReflect Rewards
             </h1>
           </div>
         </Col>

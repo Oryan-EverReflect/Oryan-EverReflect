@@ -68,7 +68,7 @@ function App() {
     <Container>
       <Row style={{ marginBottom: '50px' }}>
         <Col style={{ textAlign: 'center' }}>
-          <h1 style={{ marginTop: '30px' }}>Bankers Dream Reward Calculator</h1>
+          <h1 style={{ marginTop: '30px' }}>EverReflect Reward Calculator</h1>
         </Col>
       </Row>
       <Form>
