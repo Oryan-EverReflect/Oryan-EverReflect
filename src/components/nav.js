@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Navbar, Nav, Button, NavDropdown } from 'react-bootstrap';
 import { useMoralis } from 'react-moralis';
 import { Link } from 'react-router-dom';
-import logo from '../assets/bankersdream.png';
+import logo from '../assets/logo-white-glow-400.png';
 import LoginModal from './LoginModal.js';
 
 const NavBarTop = () => {
@@ -32,8 +32,8 @@ const NavBarTop = () => {
     <Container fluid>
       <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: '#193759' }} variant="dark">
         <Container>
-          <img src={logo} style={{ width: '100px' }} />
-          <Navbar.Brand>EverReflect Dashboard</Navbar.Brand>
+          <img src={logo} style={{ width: '200px', marginRight: '10px' }} />
+
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
           <Navbar.Collapse id="responsive-navbar-nav">

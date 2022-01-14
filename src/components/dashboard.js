@@ -6,7 +6,7 @@ import { Row, Col, Container, Form } from 'react-bootstrap';
 import ethereum_address from 'ethereum-address';
 import TotalDistributed from './TotalDistributed';
 import ClaimRewards from './claim';
-import logo from '../assets/bankersdream.png';
+import logo from '../assets/fAV.png';
 
 const Dashboard = () => {
   const { authenticate, isAuthenticated, user, logout } = useMoralis();
@@ -95,17 +95,17 @@ const Dashboard = () => {
         </Col>
       </Row>
       <Row>
-        <Col>
-          <div style={{ width: '500px', marginLeft: 'auto', marginRight: 'auto' }}>
-            <img src={logo} style={{ width: '75px', display: 'inline' }} />
+        <Col style={{ paddingLeft: '0px', paddingRight: '0px' }}>
+          <div style={{ width: '500px', marginLeft: 'auto', marginRight: 'auto', textAlign: 'center' }}>
+            <img src={logo} style={{ width: '75px', display: 'inline', marginTop: '-15px' }} />
             <h1
               style={{
                 textAlign: 'center',
-                marginTop: '20px',
+                marginTop: '30px',
                 marginBottom: '20px',
                 display: 'inline-block',
-                marginLeft: 'auto',
-                marginRight: 'auto'
+                marginLeft: '20px',
+                fontSize: '30px'
               }}
             >
               EverReflect Rewards

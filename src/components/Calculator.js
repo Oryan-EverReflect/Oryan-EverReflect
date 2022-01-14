@@ -80,7 +80,7 @@ function App() {
               <Form.Control
                 type="number"
                 onChange={(e) => setTotalAmount(e.target.value)}
-                placeholder="Enter Bankers Dream Amount"
+                placeholder="Enter EverReflect Amount"
               />
               {/* <option value={10000000}>10 Million</option>
                 <option value={25000000}>25 Million</option>

@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 const ClaimRewards = () => {
   const { authenticate, isAuthenticated, user, logout } = useMoralis();
   const { data, error, fetch, isFetching, isLoading } = useWeb3ExecuteFunction({
-    contractAddress: '0x966f75a3a48bd6133220bf83a62429bf04adf29f',
+    contractAddress: '0x3C2e501B08CF5C16061468c96b19b32bae451dA3',
     functionName: 'claim',
     abi: reflections
   });

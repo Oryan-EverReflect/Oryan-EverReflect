@@ -1,5 +1,4 @@
 [
-  { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
   {
     "anonymous": false,
     "inputs": [
@@ -99,15 +98,6 @@
   {
     "anonymous": false,
     "inputs": [
-      { "indexed": false, "internalType": "uint256", "name": "amountIn", "type": "uint256" },
-      { "indexed": false, "internalType": "address[]", "name": "path", "type": "address[]" }
-    ],
-    "name": "SwapBNBForTokens",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
       { "indexed": true, "internalType": "address", "name": "from", "type": "address" },
       { "indexed": true, "internalType": "address", "name": "to", "type": "address" },
       { "indexed": false, "internalType": "uint256", "name": "value", "type": "uint256" }
@@ -132,27 +122,6 @@
     ],
     "name": "UpdateUniswapV2Router",
     "type": "event"
-  },
-  {
-    "inputs": [],
-    "name": "BUSD",
-    "outputs": [ { "internalType": "address", "name": "", "type": "address" } ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "BUSDRewardsFee",
-    "outputs": [ { "internalType": "uint256", "name": "", "type": "uint256" } ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "_buybackWalletAddress",
-    "outputs": [ { "internalType": "address", "name": "", "type": "address" } ],
-    "stateMutability": "view",
-    "type": "function"
   },
   {
     "inputs": [ { "internalType": "address", "name": "", "type": "address" } ],
@@ -212,21 +181,7 @@
     "stateMutability": "nonpayable",
     "type": "function"
   },
-  {
-    "inputs": [],
-    "name": "buybackFee",
-    "outputs": [ { "internalType": "uint256", "name": "", "type": "uint256" } ],
-    "stateMutability": "view",
-    "type": "function"
-  },
   { "inputs": [], "name": "claim", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
-  {
-    "inputs": [],
-    "name": "deadWallet",
-    "outputs": [ { "internalType": "address", "name": "", "type": "address" } ],
-    "stateMutability": "view",
-    "type": "function"
-  },
   {
     "inputs": [],
     "name": "decimals",
@@ -254,7 +209,14 @@
   {
     "inputs": [],
     "name": "dividendTracker",
-    "outputs": [ { "internalType": "contract BankersDreamDividendTracker", "name": "", "type": "address" } ],
+    "outputs": [ { "internalType": "contract BABYTOKENDividendTracker", "name": "", "type": "address" } ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "enableAntiBot",
+    "outputs": [ { "internalType": "bool", "name": "", "type": "bool" } ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -363,6 +325,23 @@
     "type": "function"
   },
   {
+    "inputs": [
+      { "internalType": "address[5]", "name": "addrs", "type": "address[5]" },
+      { "internalType": "address", "name": "dividendTrackerImplementation", "type": "address" },
+      { "internalType": "string", "name": "name_", "type": "string" },
+      { "internalType": "string", "name": "symbol_", "type": "string" },
+      { "internalType": "uint256", "name": "totalSupply_", "type": "uint256" },
+      { "internalType": "uint256", "name": "tokenRewardsFee_", "type": "uint256" },
+      { "internalType": "uint256", "name": "liquidityFee_", "type": "uint256" },
+      { "internalType": "uint256", "name": "marketingFee_", "type": "uint256" },
+      { "internalType": "uint256", "name": "minimumTokenBalanceForDividends_", "type": "uint256" }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "inputs": [ { "internalType": "address", "name": "account", "type": "address" } ],
     "name": "isExcludedFromFees",
     "outputs": [ { "internalType": "bool", "name": "", "type": "bool" } ],
@@ -385,13 +364,6 @@
   },
   {
     "inputs": [],
-    "name": "maxWalletToken",
-    "outputs": [ { "internalType": "uint256", "name": "", "type": "uint256" } ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
     "name": "name",
     "outputs": [ { "internalType": "string", "name": "", "type": "string" } ],
     "stateMutability": "view",
@@ -405,6 +377,13 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "pinkAntiBot",
+    "outputs": [ { "internalType": "contract IPinkAntiBot", "name": "", "type": "address" } ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [ { "internalType": "uint256", "name": "gas", "type": "uint256" } ],
     "name": "processDividendTracker",
     "outputs": [],
@@ -412,6 +391,13 @@
     "type": "function"
   },
   { "inputs": [], "name": "renounceOwnership", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+  {
+    "inputs": [],
+    "name": "rewardToken",
+    "outputs": [ { "internalType": "address", "name": "", "type": "address" } ],
+    "stateMutability": "view",
+    "type": "function"
+  },
   {
     "inputs": [
       { "internalType": "address", "name": "pair", "type": "address" },
@@ -423,22 +409,8 @@
     "type": "function"
   },
   {
-    "inputs": [ { "internalType": "uint256", "name": "value", "type": "uint256" } ],
-    "name": "setBUSDRewardsFee",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [ { "internalType": "uint256", "name": "_buybackFee", "type": "uint256" } ],
-    "name": "setBuybackFee",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [ { "internalType": "address payable", "name": "wallet", "type": "address" } ],
-    "name": "setBuybackWallet",
+    "inputs": [ { "internalType": "bool", "name": "_enable", "type": "bool" } ],
+    "name": "setEnableAntiBot",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -451,7 +423,7 @@
     "type": "function"
   },
   {
-    "inputs": [ { "internalType": "uint256", "name": "_marketingFee", "type": "uint256" } ],
+    "inputs": [ { "internalType": "uint256", "name": "value", "type": "uint256" } ],
     "name": "setMarketingFee",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -465,15 +437,15 @@
     "type": "function"
   },
   {
-    "inputs": [ { "internalType": "uint256", "name": "_maxToken", "type": "uint256" } ],
-    "name": "setMaxWalletTokend",
+    "inputs": [ { "internalType": "uint256", "name": "amount", "type": "uint256" } ],
+    "name": "setSwapTokensAtAmount",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
-    "inputs": [ { "internalType": "uint256", "name": "newAmount", "type": "uint256" } ],
-    "name": "setSwapTokensAtAmount",
+    "inputs": [ { "internalType": "uint256", "name": "value", "type": "uint256" } ],
+    "name": "setTokenRewardsFee",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -489,6 +461,13 @@
     "inputs": [],
     "name": "symbol",
     "outputs": [ { "internalType": "string", "name": "", "type": "string" } ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "tokenRewardsFee",
+    "outputs": [ { "internalType": "uint256", "name": "", "type": "uint256" } ],
     "stateMutability": "view",
     "type": "function"
   },
