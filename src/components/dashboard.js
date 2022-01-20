@@ -105,7 +105,7 @@ const Dashboard = () => {
                 marginBottom: '20px',
                 display: 'inline-block',
                 marginLeft: '20px',
-                fontSize: '30px'
+                fontSize: '20px'
               }}
             >
               EverReflect Rewards
